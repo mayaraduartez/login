@@ -1,15 +1,29 @@
 const express = require("express");
 const router = express.Router();
 const loginController = require("../controllers/loginController"); //importa as funções de controller
+const principalController = require("../controllers/principalController"); 
 
 //abrir a tela de login e cadastro
-router.get("/", loginController.abreTela);
+router.get("/login", loginController.abreTela);
 
 router.get("/cadastro", loginController.cadastrar);
 
+router.get("/", principalController.principal);
+
+router.get("/meuspedidos", principalController.pedidos);
+
+router.get("/carrinho", principalController.abrecarrinho);
+
+
+router.get("/menu", principalController.menu);
+
+router.get("/addmenu", principalController.addmenu);
+
+
+
 router.post("/cadastro", loginController.cadastro);
 
-router.post("/", loginController.logar);
+router.post("/login", loginController.logar);
 
 
 module.exports = router;

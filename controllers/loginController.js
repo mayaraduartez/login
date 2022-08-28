@@ -27,9 +27,10 @@ async function cadastrar(req, res) {
     res.render("login/cadastro.ejs");
 }
 
+
 const logar = passport.authenticate("local", {
   failureRedirect: "/", 
-  successRedirect: "/pronto",
+  successRedirect: "/",
 });
 
 module.exports = { abreTela, cadastro, cadastrar, logar};
