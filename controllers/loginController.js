@@ -14,7 +14,7 @@ async function cadastro(req, res) {
     email: email,
     senha: hash,
   });
-  res.redirect("/");
+  res.redirect("/login");
 }
 
 
@@ -29,8 +29,8 @@ async function cadastrar(req, res) {
 
 
 const logar = passport.authenticate("local", {
-  failureRedirect: "/", 
-  successRedirect: "/",
+  failureRedirect: "/login", 
+  successRedirect: "/addmenu",
 });
 
 module.exports = { abreTela, cadastro, cadastrar, logar};

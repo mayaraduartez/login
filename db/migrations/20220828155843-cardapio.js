@@ -14,7 +14,10 @@ module.exports = {
         allowNull: false,
       },
       titulo: Sequelize.STRING,
-      valor: Sequelize.INTEGER,
+      descricao: Sequelize.STRING,
+      valor: Sequelize.FLOAT,
+      tipo: Sequelize.STRING,
+
     });
   },
 
