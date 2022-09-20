@@ -35,6 +35,13 @@ principalController.addmenu,
 
 );
 
+router.get("/carrinho/add/:id", 
+principalController.addcarrinho,
+);
+
+router.post("/carrinho", principalController.salvaritens);
+
+
 
 router.post("/addmenu", 
 autenticacaoadmin,
@@ -43,11 +50,7 @@ principalController.criarmenu,
 
 );
 
-router.get("/carrinho/add/:id", 
-autenticacao,
-principalController.addcarrinho,
 
-);
 
 
 module.exports = router;
